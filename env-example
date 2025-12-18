@@ -1,0 +1,59 @@
+# EdAgent AI Backend Environment Configuration
+# Copy this to .env and fill in your actual values
+
+# Database
+DATABASE_URL=postgresql://edagent_user:secure_password@localhost:5432/edagent_db
+DATABASE_ECHO=false
+
+# Redis
+REDIS_URL=redis://localhost:6379/0
+
+# API Keys - Get from respective services
+OPENAI_API_KEY=sk-your-openai-key-here
+ANTHROPIC_API_KEY=your-anthropic-key-here
+
+# Job APIs
+HH_API_KEY=your-hh-ru-key
+SUPERJOB_API_KEY=your-superjob-key
+LINKEDIN_API_KEY=your-linkedin-key
+
+# Email Service
+SENDGRID_API_KEY=SG.your-sendgrid-key
+SENDGRID_FROM_EMAIL=noreply@edagent.ai
+
+# AWS/Cloud (Optional)
+AWS_ACCESS_KEY_ID=your-aws-key
+AWS_SECRET_ACCESS_KEY=your-aws-secret
+AWS_REGION=eu-central-1
+
+# Application Settings
+DEBUG=false
+LOG_LEVEL=INFO
+ENVIRONMENT=production
+
+# Security
+SECRET_KEY=your-super-secret-key-change-this-in-production
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# CORS Settings
+CORS_ORIGINS=["http://localhost:3000","http://localhost:8000"]
+
+# Celery
+CELERY_BROKER_URL=redis://localhost:6379/1
+CELERY_RESULT_BACKEND=redis://localhost:6379/2
+
+# Monitoring
+PROMETHEUS_ENABLED=true
+PROMETHEUS_PORT=9090
+
+# Rate Limiting
+RATE_LIMIT_ENABLED=true
+RATE_LIMIT_REQUESTS=1000
+RATE_LIMIT_PERIOD=3600
+
+# Feature Flags
+ENABLE_EMAIL_SENDING=true
+ENABLE_LLM_GENERATION=true
+ENABLE_WEB_SCRAPING=true
+ENABLE_COGNITIVE_LEARNING=false
